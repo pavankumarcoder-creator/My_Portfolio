@@ -6,13 +6,14 @@ import Shop from "./assets/Images/shopy.png";
 import Budget from "./assets/Images/Budget.png";
 import Resume from "./assets/Images/resume.jpg";
 import Hero from "./assets/Images/pavan.jpg";
+import Pavan from "/pavan_kumar.pdf"
 
 // --- MOCK DATA ---
 const PORTFOLIO_DATA = {
   designation: "Frontend Developer",
   name: "Naga Venkata Pavan Kumar",
   photoUrl: Hero,
-  resumeLink: "./assets/pavan_kumar.pdf",
+  resumeLink: Pavan,
   socials: [
     { name: "GitHub", icon: Github, link: "https://github.com/pavankumarcoder-creator" },
     { name: "LinkedIn", icon: Linkedin, link: "https://www.linkedin.com/in/pavankumarcoder569/" },
@@ -149,6 +150,7 @@ const getAOSClass = (isInView, index, type = 'slide-up') => {
 
   return `${baseClasses} ${animationClasses}`;
 };
+
 
 // Utility function to get Google Docs direct download URL
 const getGoogleDocsDownloadUrl = (url) => {
@@ -519,8 +521,8 @@ const App = () => {
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start pt-4">
                 {/* 3. Resume Download Button - Animation 4 */}
                 <a
-                  href={getGoogleDocsDownloadUrl(PORTFOLIO_DATA.resumeLink)}
-                  download="Homayra_Binte_Harun_Heme_Resume.pdf"
+                  href={PORTFOLIO_DATA.resumeLink}
+                  download="Pavan_Kumar_Resume.pdf"
                   className="flex items-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-xl shadow-purple-500/50 transform hover:scale-105 delay-400 opacity-0 animate-on-mount"
                 >
                   <Download className="w-5 h-5 mr-2" />
