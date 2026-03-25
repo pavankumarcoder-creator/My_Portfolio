@@ -23,7 +23,7 @@ const PORTFOLIO_DATA = {
     journey: "My development journey started with DevGnan. I began by working on projects using simple HTML and CSS. As my knowledge grew, I eagerly explored and mastered the Frontend (JavaScript, React.JS, Redux) development. While I identify as a slow learner, I utilize my inherent patience to systematically overcome this challenge, ensuring I fully grasp every concept and deliver quality work."
   },
   skills: [
-    { category: "Frontend", icon: LayoutList, list: ["React", "Redux", "JavaScript (ES6+)", "HTML5", "CSS3", "Bootstrap"] },
+    { category: "Frontend", icon: LayoutList, list: ["React", "JavaScript (ES6+)", "HTML5", "CSS3"] },
     { category: "Tools", icon: Zap, list: ["Git/GitHub", "VS Code", "Vercel", "Nelify","Render"] },
   ],
   education: [
@@ -46,18 +46,24 @@ const PORTFOLIO_DATA = {
   ],
   experience: [
     {
+      title:"Web Developer",
+      company:"Amura Marketing Technologies",
+      period:"2025-2026",
+      description:"Focusing on building production-ready projects"
+    },
+    {
       title: "Self-learning",
       company: "Currently Seeking Opportunities",
-      period: "2024-present",
+      period: "2024-2025",
       description: "Focusing on building production-ready projects and continuously learning new technologies to start a professional journey .",
-    },
+    }
   ],
   projects: [
     {
       id: 1,
       name: "ShopEasy",
       image:Shop,
-      techStack: ["React", "Redux", "JavaScript", "CSS3", "JWT", "Razorpay API",],
+      techStack: ["React", "JavaScript", "CSS3", "HTML5"],
       description: "shopEasy is a full-fledged e-commerce web app I built end-to-end, covering both the customer-facing store and the admin dashboard.",
       liveLink: "https://shopeasy-a8h6.onrender.com/",
       githubLink: "https://github.com/pavankumarcoder-creator/ShopEasy",
