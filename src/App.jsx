@@ -46,15 +46,9 @@ const PORTFOLIO_DATA = {
   ],
   experience: [
     {
-      title:"Web Developer",
-      company:"Amura Marketing Technologies",
-      period:"2025-2026",
-      description:"Focusing on building production-ready projects"
-    },
-    {
       title: "Self-learning",
       company: "Currently Seeking Opportunities",
-      period: "2024-2025",
+      period: "2024- Present",
       description: "Focusing on building production-ready projects and continuously learning new technologies to start a professional journey .",
     }
   ],
