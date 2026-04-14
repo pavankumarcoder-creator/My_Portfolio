@@ -23,7 +23,7 @@ const PORTFOLIO_DATA = {
     journey: "My development journey started with DevGnan. I began by working on projects using simple HTML and CSS. As my knowledge grew, I eagerly explored and mastered the Frontend (JavaScript, React.JS, Redux) development. While I identify as a slow learner, I utilize my inherent patience to systematically overcome this challenge, ensuring I fully grasp every concept and deliver quality work."
   },
   skills: [
-    { category: "Frontend", icon: LayoutList, list: ["React", "JavaScript (ES6+)", "HTML5", "CSS3"] },
+    { category: "Frontend", icon: LayoutList, list: ["React", "JavaScript (ES6+)", "HTML5", "CSS3","Redux","Redux Toolkit"] },
     { category: "Tools", icon: Zap, list: ["Git/GitHub", "VS Code", "Vercel", "Nelify","Render"] },
   ],
   education: [
@@ -57,7 +57,7 @@ const PORTFOLIO_DATA = {
       id: 1,
       name: "ShopEasy",
       image:Shop,
-      techStack: ["React", "JavaScript", "CSS3", "HTML5"],
+      techStack: ["React", "JavaScript", "CSS3", "HTML5","Redux Toolkit"],
       description: "shopEasy is a full-fledged e-commerce web app I built end-to-end, covering both the customer-facing store and the admin dashboard.",
       liveLink: "https://shopeasy-a8h6.onrender.com/",
       githubLink: "https://github.com/pavankumarcoder-creator/ShopEasy",
