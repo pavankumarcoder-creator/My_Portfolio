@@ -6,14 +6,12 @@ import Shop from "./assets/Images/shopy.png";
 import Budget from "./assets/Images/Budget.png";
 import Resume from "./assets/Images/resume.jpg";
 import Hero from "./assets/Images/pavan.jpg";
-import Pavan from "/pavan_kumar.pdf"
 
 // --- MOCK DATA ---
 const PORTFOLIO_DATA = {
   designation: "Frontend Developer",
   name: "Naga Venkata Pavan Kumar",
   photoUrl: Hero,
-  resumeLink: Pavan,
   socials: [
     { name: "GitHub", icon: Github, link: "https://github.com/pavankumarcoder-creator" },
     { name: "LinkedIn", icon: Linkedin, link: "https://www.linkedin.com/in/pavankumarcoder569/" },
