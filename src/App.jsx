@@ -1,7 +1,24 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import {
-  Menu, X, Sun, Moon, Github, Linkedin, Twitter, Facebook, Download, Mail, Phone, Code, GraduationCap, Briefcase, Zap, Star, LayoutList, ArrowRight
-} from 'lucide-react';
+  Menu,
+  X,
+  Sun,
+  Moon,
+  Github,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Download,
+  Mail,
+  Phone,
+  Code,
+  GraduationCap,
+  Briefcase,
+  Zap,
+  Star,
+  LayoutList,
+  ArrowRight,
+} from "lucide-react";
 import Shop from "./assets/Images/shopy.png";
 import Budget from "./assets/Images/Budget.png";
 import Resume from "./assets/Images/resume.jpg";
@@ -13,76 +30,81 @@ const PORTFOLIO_DATA = {
   name: "Naga Venkata Pavan Kumar",
   photoUrl: Hero,
   socials: [
-    { name: "GitHub", icon: Github, link: "https://github.com/pavankumarcoder-creator" },
-    { name: "LinkedIn", icon: Linkedin, link: "https://www.linkedin.com/in/pavankumarcoder569/" },
+    {
+      name: "GitHub",
+      icon: Github,
+      link: "https://github.com/pavankumarcoder-creator",
+    },
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
+      link: "https://www.linkedin.com/in/pavankumarcoder569/",
+    },
   ],
   about: {
-    intro: "I am Naga Venkata Pavan Kumar, a passionate Frontend Developer. I approach my work with a detail-oriented mindset and am committed to building robust and functional applications. I pride myself on being a good listener, which helps me understand project requirements deeply, and I highly value continuous learning in the frontendend development field.",
-    journey: "My development journey started with DevGnan. I began by working on projects using simple HTML and CSS. As my knowledge grew, I eagerly explored and mastered the Frontend (JavaScript, React.JS, Redux) development. While I identify as a slow learner, I utilize my inherent patience to systematically overcome this challenge, ensuring I fully grasp every concept and deliver quality work."
+    intro:
+      "Hey, I am Naga Venkata Pavan Kumar — a Frontend Developer who loves turning ideas into clean, functional web experiences. My journey started at DevGnan, where I went from writing my first lines of HTML and CSS to building and shipping a full-stack e-commerce application with React.js, Redux Toolkit, JWT authentication, and live payment integration via Razorpay. Every project I have worked on has been driven by one goal — write code that actually works well for the people using it. I bring a careful, thorough approach to everything I build. I listen before I code, ask the right questions, and don't cut corners on the details that matter. Outside of coding, I am constantly exploring new tools and patterns in the frontend ecosystem to keep leveling up."
   },
   skills: [
-    { category: "Frontend", icon: LayoutList, list: ["React", "JavaScript (ES6+)", "HTML5", "CSS3","Redux","Redux Toolkit"] },
-    { category: "Tools", icon: Zap, list: ["Git/GitHub", "VS Code", "Vercel", "Nelify","Render"] },
-  ],
-  education: [
     {
-      institution: "Chalapathi Institute of Engineering and Technology",
-      degree: "B.Tech. in Computer Science & Engineering",
-      period: "2020-2024",
+      category: "Frontend",
+      icon: LayoutList,
+      list: [
+        "React",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3",
+        "Redux",
+        "Redux Toolkit",
+      ],
     },
     {
-      institution: "Sri Chaitanya Junior College",
-      degree: "Intermediate",
-      period: "2018-2020",
-    },
-    {
-      institution: "GOVT. Boys High School",
-      degree: "SSC",
-      period: "2017-2018",
-      
+      category: "Tools",
+      icon: Zap,
+      list: ["Git/GitHub", "VS Code", "Vercel", "Nelify", "Render"],
     },
   ],
+  
   experience: [
     {
       title: "Self-learning",
       company: "Currently Seeking Opportunities",
       period: "2024- Present",
-      description: "Focusing on building production-ready projects and continuously learning new technologies to start a professional journey .",
-    }
+      description:
+        "Focusing on building production-ready projects and continuously learning new technologies to start a professional journey .",
+    },
   ],
   projects: [
     {
       id: 1,
       name: "ShopEasy",
-      image:Shop,
-      techStack: ["React", "JavaScript", "CSS3", "HTML5","Redux Toolkit"],
-      description: "shopEasy is a full-fledged e-commerce web app I built end-to-end, covering both the customer-facing store and the admin dashboard.",
+      image: Shop,
+      techStack: ["React", "JavaScript", "CSS3", "HTML5", "Redux Toolkit"],
+      description:
+        "ShopEasy is a fully functional e-commerce web application where users can browse products, manage their cart, and complete purchases — built to reflect how real-world shopping platforms work, not just a demo with mock data.",
       liveLink: "https://shopeasy-a8h6.onrender.com/",
       githubLink: "https://github.com/pavankumarcoder-creator/ShopEasy",
-      challenges: "Overcame challenges in implementing a cart functionality, user athentication, payment integration, and deploying the project successfully.",
-      futurePlans: "Planning to add a more products and performance optimization for speed loading.",
     },
     {
       id: 2,
       name: "Budget Expense Tracker",
-      image:Budget,
+      image: Budget,
       techStack: ["React", "React-router", "JavaScript", "CSS3", "HTML5"],
-      description: "A personal finance tracker built with React.js to manage income and expenses, visualize spending, and monitor financial health.",
+      description:
+        "A personal finance tracker built with React.js to manage income and expenses, visualize spending, and monitor financial health.",
       liveLink: " https://budget-expense-tracker-ypgu.onrender.com/",
-      githubLink: "https://github.com/pavankumarcoder-creator/Budget-Expense-Tracker",
-      challenges: "Faced challenges while implementing allocate monthly budgets when income varies,and ensuring smooth user interactions across the platform.",
-      futurePlans: "Plan to add user authentication, real-time pi-charts, and improving tracking system.",
+      githubLink:
+        "https://github.com/pavankumarcoder-creator/Budget-Expense-Tracker",
     },
     {
       id: 3,
-      image:Resume,
+      image: Resume,
       name: "AI Resume Builder",
       techStack: ["React", "Bootstrap", "JavaScript", "Gemini API"],
-      description: "I recently built an AI-integrated tool using Gemini API — designed to help graduates and job seekers craft personalized cover letters and optimize their resumes to perfectly align with company job descriptions.",
+      description:
+        "I recently built an AI-integrated tool using Gemini API — designed to help graduates and job seekers craft personalized cover letters and optimize their resumes to perfectly align with company job descriptions.",
       liveLink: "https://resume-builder-d2ho.onrender.com/",
       githubLink: "https://github.com/pavankumarcoder-creator/Resume-Builder",
-      challenges: "Faced challenges while exploring Gemini API and implementing its features effectively.",
-      futurePlans: "Plan to  add user authentication, push notifications, and advanced workout filtering/search.",
     },
   ],
 };
@@ -106,7 +128,7 @@ const useInViewAnimation = (threshold = 0.1) => {
           observer.unobserve(element);
         }
       },
-      { threshold }
+      { threshold },
     );
 
     observer.observe(element);
@@ -120,50 +142,34 @@ const useInViewAnimation = (threshold = 0.1) => {
 };
 
 // Utility function to generate AOS classes (Reworked for more variety)
-const getAOSClass = (isInView, index, type = 'slide-up') => {
+const getAOSClass = (isInView, index, type = "slide-up") => {
   const baseClasses = "transition-all duration-1000 ease-out transform";
-  const delay = isInView ? `${300 + index * 150}ms` : '0ms'; // Staggered delay for child items
-  let animationClasses = '';
+  const delay = isInView ? `${300 + index * 150}ms` : "0ms"; // Staggered delay for child items
+  let animationClasses = "";
 
   if (isInView) {
-    animationClasses = 'opacity-100 translate-y-0 scale-100 rotate-0';
+    animationClasses = "opacity-100 translate-y-0 scale-100 rotate-0";
   } else {
     switch (type) {
-      case 'slide-left':
-        animationClasses = 'opacity-0 -translate-x-full';
+      case "slide-left":
+        animationClasses = "opacity-0 -translate-x-full";
         break;
-      case 'slide-right':
-        animationClasses = 'opacity-0 translate-x-full';
+      case "slide-right":
+        animationClasses = "opacity-0 translate-x-full";
         break;
-      case 'scale-in':
-        animationClasses = 'opacity-0 scale-50';
+      case "scale-in":
+        animationClasses = "opacity-0 scale-50";
         break;
-      case 'rotate-in':
-      case 'slide-up': // Default
+      case "rotate-in":
+      case "slide-up": // Default
       default:
-        animationClasses = 'opacity-0 translate-y-12';
+        animationClasses = "opacity-0 translate-y-12";
         break;
     }
   }
 
   return `${baseClasses} ${animationClasses}`;
 };
-
-
-// Utility function to get Google Docs direct download URL
-const getGoogleDocsDownloadUrl = (url) => {
-  // Extract document ID from Google Docs URL
-  const match = url.match(/\/d\/([a-zA-Z0-9-_]+)/);
-  if (match && match[1]) {
-    const docId = match[1];
-    // Return direct download URL in PDF format
-    return `https://docs.google.com/document/d/${docId}/export?format=pdf`;
-  }
-  // If not a Google Docs URL, return original URL
-  return url;
-};
-
-
 
 // Custom Hook for Trailing LINE Cursor Effect (Multi-dot implementation)
 const useTrailingCursor = (isDarkMode) => {
@@ -205,11 +211,12 @@ const useTrailingCursor = (isDarkMode) => {
       positions[0].targetX = mouseX;
       positions[0].targetY = mouseY;
 
-      positions[0].currentX += (positions[0].targetX - positions[0].currentX) * primarySpeed;
-      positions[0].currentY += (positions[0].targetY - positions[0].currentY) * primarySpeed;
+      positions[0].currentX +=
+        (positions[0].targetX - positions[0].currentX) * primarySpeed;
+      positions[0].currentY +=
+        (positions[0].targetY - positions[0].currentY) * primarySpeed;
 
-      trailRefs.current[0].style.transform =
-        `translate3d(${positions[0].currentX - 5}px, ${positions[0].currentY - 5}px, 0)`;
+      trailRefs.current[0].style.transform = `translate3d(${positions[0].currentX - 5}px, ${positions[0].currentY - 5}px, 0)`;
 
       // 2. Update the position of the trailing dots
       for (let i = 1; i < TRAIL_LENGTH; i++) {
@@ -218,8 +225,10 @@ const useTrailingCursor = (isDarkMode) => {
         positions[i].targetY = positions[i - 1].currentY;
 
         // Smoothly move dot 'i' towards its target (dot i-1)
-        positions[i].currentX += (positions[i].targetX - positions[i].currentX) * lagFactor;
-        positions[i].currentY += (positions[i].targetY - positions[i].currentY) * lagFactor;
+        positions[i].currentX +=
+          (positions[i].targetX - positions[i].currentX) * lagFactor;
+        positions[i].currentY +=
+          (positions[i].targetY - positions[i].currentY) * lagFactor;
 
         // Apply transformation to the DOM element
         trailRefs.current[i].style.transform =
@@ -229,42 +238,46 @@ const useTrailingCursor = (isDarkMode) => {
       animationFrameId = requestAnimationFrame(updateCursor);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
     updateCursor(); // Start the loop
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
-  const baseColor = isDarkMode ? 'rgba(192, 132, 252, 1)' : 'rgba(139, 92, 246, 1)'; // Purple
-  const trailColor = isDarkMode ? 'rgba(216, 180, 254, 0.7)' : 'rgba(167, 139, 250, 0.8)'; // Lighter Purple/Pink
+  const baseColor = isDarkMode
+    ? "rgba(192, 132, 252, 1)"
+    : "rgba(139, 92, 246, 1)"; // Purple
+  const trailColor = isDarkMode
+    ? "rgba(216, 180, 254, 0.7)"
+    : "rgba(167, 139, 250, 0.8)"; // Lighter Purple/Pink
 
   // Render the trail elements
   return (
     <>
       {trailElements.map((_, index) => {
         // Calculate size and opacity gradient for the trail effect
-        const size = 10 - (index * 0.5); // Dots get smaller towards the tail
-        const opacity = 1 - (index / TRAIL_LENGTH); // Dots fade out towards the tail
+        const size = 10 - index * 0.5; // Dots get smaller towards the tail
+        const opacity = 1 - index / TRAIL_LENGTH; // Dots fade out towards the tail
         const color = index === 0 ? baseColor : trailColor;
 
         return (
           <div
             key={index}
-            ref={el => trailRefs.current[index] = el}
+            ref={(el) => (trailRefs.current[index] = el)}
             style={{
               width: `${size}px`,
               height: `${size}px`,
               backgroundColor: color,
-              borderRadius: '50%',
-              position: 'absolute',
-              pointerEvents: 'none',
+              borderRadius: "50%",
+              position: "absolute",
+              pointerEvents: "none",
               zIndex: 9999,
               opacity: opacity,
               filter: `blur(${Math.min(index * 0.8, 3)}px)`, // Add subtle blur to tail
-              willChange: 'transform',
+              willChange: "transform",
               top: 0,
               left: 0,
             }}
@@ -275,19 +288,22 @@ const useTrailingCursor = (isDarkMode) => {
   );
 };
 
-
 // --- MAIN COMPONENTS ---
 
 const Section = ({ id, title, children }) => {
   const { ref, isInView } = useInViewAnimation(0.2);
 
   return (
-    <section id={id} ref={ref} className="py-24 px-4 sm:px-8 lg:px-16 flex items-center justify-center">
+    <section
+      id={id}
+      ref={ref}
+      className="py-24 px-4 sm:px-8 lg:px-16 flex items-center justify-center"
+    >
       <div className="w-full max-w-6xl">
         {/* Animated Section Title (Slide-Right effect on title) */}
         <h2
           className={`text-4xl sm:text-5xl font-extrabold mb-12 text-center text-purple-600 dark:text-purple-400 border-b-4 border-purple-200 dark:border-purple-700 pb-3 inline-block mx-auto 
-            ${getAOSClass(isInView, 0, 'slide-right')}`}
+            ${getAOSClass(isInView, 0, "slide-right")}`}
         >
           {title}
         </h2>
@@ -327,35 +343,34 @@ const ProjectDetailModal = ({ project, onClose }) => {
         />
 
         <div className="p-8">
-          <h3 className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-4">{project.name}</h3>
+          <h3 className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-4">
+            {project.name}
+          </h3>
 
           <div className="space-y-6 text-gray-700 dark:text-gray-300">
             {/* Tech Stack */}
             <div>
-              <p className="font-semibold text-lg text-pink-500 dark:text-pink-300 flex items-center mb-2"><Code className="w-5 h-5 mr-2" /> Main Technology Stack</p>
+              <p className="font-semibold text-lg text-pink-500 dark:text-pink-300 flex items-center mb-2">
+                <Code className="w-5 h-5 mr-2" /> Main Technology Stack
+              </p>
               <div className="flex flex-wrap gap-2">
                 {project.techStack.map((tech) => (
-                  <span key={tech} className="bg-purple-100 dark:bg-purple-700 text-purple-800 dark:text-purple-100 text-sm font-medium px-3 py-1 rounded-full">{tech}</span>
+                  <span
+                    key={tech}
+                    className="bg-purple-100 dark:bg-purple-700 text-purple-800 dark:text-purple-100 text-sm font-medium px-3 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
             </div>
 
             {/* Description */}
             <div>
-              <p className="font-semibold text-lg text-pink-500 dark:text-pink-300 flex items-center mb-2"><LayoutList className="w-5 h-5 mr-2" /> Brief Description</p>
+              <p className="font-semibold text-lg text-pink-500 dark:text-pink-300 flex items-center mb-2">
+                <LayoutList className="w-5 h-5 mr-2" /> Brief Description
+              </p>
               <p>{project.description}</p>
-            </div>
-
-            {/* Challenges */}
-            <div>
-              <p className="font-semibold text-lg text-pink-500 dark:text-pink-300 flex items-center mb-2"><Zap className="w-5 h-5 mr-2" /> Challenges Faced</p>
-              <p>{project.challenges}</p>
-            </div>
-
-            {/* Future Plans */}
-            <div>
-              <p className="font-semibold text-lg text-pink-500 dark:text-pink-300 flex items-center mb-2"><Star className="w-5 h-5 mr-2" /> Potential Improvements & Future Plans</p>
-              <p>{project.futurePlans}</p>
             </div>
           </div>
 
@@ -383,7 +398,6 @@ const ProjectDetailModal = ({ project, onClose }) => {
   );
 };
 
-
 // --- APP COMPONENT ---
 
 const App = () => {
@@ -392,40 +406,36 @@ const App = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   // Toggle Dark Mode
-  const toggleDarkMode = () => setIsDarkMode(prev => !prev);
+  const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
 
   // Trailing Cursor
   const CursorTrail = useTrailingCursor(isDarkMode);
 
-  
-
   // Set dark class on body
   useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode]);
 
   // Scroll to section and close menu (for mobile)
   const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     setIsMenuOpen(false);
   };
 
   // --- RENDER SECTIONS ---
 
-  // Navbar 
+  // Navbar
   const Navbar = () => {
     const navItems = [
-      { id: 'home', label: 'Home' },
-      { id: 'about', label: 'About Me' },
-      { id: 'skills', label: 'Skills' },
-      { id: 'education', label: 'Education' },
-      { id: 'experience', label: 'Experience' },
-      { id: 'projects', label: 'Projects' },
-      { id: 'contact', label: 'Contact' },
+      { id: "home", label: "Home" },
+      { id: "about", label: "About Me" },
+      { id: "skills", label: "Skills" },
+      { id: "projects", label: "Projects" },
+      { id: "contact", label: "Contact" },
     ];
 
     const NavLink = ({ id, label }) => (
@@ -447,7 +457,9 @@ const App = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex space-x-2">
-              {navItems.map(item => <NavLink key={item.id} {...item} />)}
+              {navItems.map((item) => (
+                <NavLink key={item.id} {...item} />
+              ))}
             </nav>
 
             <div className="flex items-center space-x-4">
@@ -476,14 +488,15 @@ const App = () => {
         {isMenuOpen && (
           <div className="lg:hidden absolute w-full bg-white dark:bg-gray-800 border-t border-purple-200 dark:border-purple-800 shadow-xl">
             <nav className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-              {navItems.map(item => (
+              {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${activeSection === item.id
-                    ? 'bg-purple-600 text-white'
-                    : 'text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-gray-700'
-                    }`}
+                  className={`block text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    activeSection === item.id
+                      ? "bg-purple-600 text-white"
+                      : "text-gray-700 dark:text-gray-200 hover:bg-purple-100 dark:hover:bg-gray-700"
+                  }`}
                 >
                   {item.label}
                 </button>
@@ -498,14 +511,19 @@ const App = () => {
   const HeroSection = () => {
     // Uses CSS keyframes for initial mount animation (similar to previous version)
     return (
-      <section id="home" className="py-24 px-4 sm:px-8 lg:px-16 flex items-center justify-center min-h-screen">
+      <section
+        id="home"
+        className="py-24 px-4 sm:px-8 lg:px-16 flex items-center justify-center min-h-screen"
+      >
         <div className="w-full max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center justify-between text-center lg:text-left">
-
             <div className="lg:w-1/2 space-y-6 order-2 lg:order-1">
               {/* Animation 1: Name */}
               <h1 className="text-6xl sm:text-7xl font-extrabold text-gray-900 dark:text-gray-50 leading-tight transition-all duration-700 ease-out transform delay-100 opacity-0 translate-y-4 animate-on-mount">
-                Hi, I'm <br /> <span className="text-purple-600 dark:text-purple-400">{PORTFOLIO_DATA.name}</span>
+                Hi, I'm <br />{" "}
+                <span className="text-purple-600 dark:text-purple-400">
+                  {PORTFOLIO_DATA.name}
+                </span>
               </h1>
               {/* Animation 2: Designation */}
               <p className="text-2xl sm:text-3xl font-medium text-pink-500 dark:text-pink-300 tracking-wide transition-all duration-700 ease-out transform delay-200 opacity-0 translate-y-4 animate-on-mount">
@@ -513,20 +531,11 @@ const App = () => {
               </p>
               {/* Animation 3: Description */}
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-lg lg:max-w-none mx-auto lg:mx-0 transition-all duration-700 ease-out transform delay-300 opacity-0 translate-y-4 animate-on-mount">
-                I turn creative ideas into robust, high-performance web applications. Let's build something amazing together.
+                I turn creative ideas into robust, high-performance web
+                applications. Let's build something amazing together.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start pt-4">
-                {/* 3. Resume Download Button - Animation 4 */}
-                <a
-                  href={PORTFOLIO_DATA.resumeLink}
-                  download="Pavan_Kumar_Resume.pdf"
-                  className="flex items-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-xl shadow-purple-500/50 transform hover:scale-105 delay-400 opacity-0 animate-on-mount"
-                >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Resume
-                </a>
-
                 {/* 4. Social Links - Grouped for mobile alignment */}
                 <div className="flex items-center gap-4">
                   {PORTFOLIO_DATA.socials.map((social, index) => (
@@ -614,16 +623,10 @@ const App = () => {
       {(isInView) => (
         <div
           className={`bg-white dark:bg-gray-800 p-8 sm:p-12 rounded-2xl shadow-xl border border-purple-100 dark:border-purple-900 
-            ${getAOSClass(isInView, 0, 'slide-left')}`}
+            ${getAOSClass(isInView, 0, "slide-left")}`}
         >
           <p className="text-gray-700 dark:text-gray-300 text-lg mb-6 leading-relaxed">
             {PORTFOLIO_DATA.about.intro}
-          </p>
-          <p className="text-gray-700 dark:text-gray-300 text-lg mb-6 leading-relaxed border-l-4 border-purple-600 pl-4 italic">
-            <span className="font-semibold text-purple-600 dark:text-purple-400">My Programming Journey:</span> {PORTFOLIO_DATA.about.journey}
-          </p>
-          <p className="mt-6 text-xl font-bold text-pink-500 dark:text-pink-300 flex items-center">
-            Ready to collaborate! <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 hover:translate-x-1" />
           </p>
         </div>
       )}
@@ -638,8 +641,10 @@ const App = () => {
             <div
               key={skillGroup.category}
               className={`bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border-t-4 border-purple-600 dark:border-purple-400 transform hover:scale-[1.02] transition-all duration-700 ease-out 
-                ${getAOSClass(isInView, index, 'rotate-in')}`}
-              style={{ transitionDelay: isInView ? `${300 + index * 200}ms` : '0ms' }}
+                ${getAOSClass(isInView, index, "rotate-in")}`}
+              style={{
+                transitionDelay: isInView ? `${300 + index * 200}ms` : "0ms",
+              }}
             >
               <div className="flex items-center mb-4">
                 <skillGroup.icon className="w-8 h-8 text-purple-600 dark:text-purple-400 mr-3" />
@@ -649,7 +654,10 @@ const App = () => {
               </div>
               <ul className="space-y-3">
                 {skillGroup.list.map((skill) => (
-                  <li key={skill} className="flex items-center text-gray-700 dark:text-gray-300">
+                  <li
+                    key={skill}
+                    className="flex items-center text-gray-700 dark:text-gray-300"
+                  >
                     <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
                     {skill}
                   </li>
@@ -662,82 +670,9 @@ const App = () => {
     </Section>
   );
 
-  const EducationSection = () => (
-    <Section id="education" title="Educational Qualification">
-      {(isInView) => (
-        <div className="relative space-y-8 md:space-y-12">
-          {PORTFOLIO_DATA.education.map((edu, index) => (
-            <div key={index} className="flex flex-col md:flex-row relative">
-              {/* Timeline Connector (Visible on desktop) */}
-              <div className={`hidden md:block absolute left-0 top-0 w-1 h-full bg-purple-300 dark:bg-purple-700 ${index === PORTFOLIO_DATA.education.length - 1 ? 'h-1/2' : ''}`}></div>
+  
 
-              <div
-                className={`md:w-1/12 flex justify-center relative z-10 
-                  ${getAOSClass(isInView, index, 'scale-in')}`}
-                style={{ transitionDelay: isInView ? `${300 + index * 200}ms` : '0ms' }}
-              >
-                <div className="w-8 h-8 bg-purple-600 dark:bg-purple-400 rounded-full flex items-center justify-center shadow-md">
-                  <GraduationCap className="w-4 h-4 text-white" />
-                </div>
-              </div>
-
-              <div
-                className={`md:w-11/12 pl-0 md:pl-12 pt-4 md:pt-0 
-                  ${getAOSClass(isInView, index, 'slide-up')}`}
-                style={{ transitionDelay: isInView ? `${300 + index * 200}ms` : '0ms' }}
-              >
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-purple-100 dark:border-purple-900">
-                  <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400">{edu.degree}</h3>
-                  <p className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-3">{edu.institution}</p>
-                  <p className="text-sm font-semibold text-pink-500 dark:text-pink-300 mb-1">{edu.period}</p>
-                  <p className="text-gray-600 dark:text-gray-400">{edu.details}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </Section>
-  );
-
-  const ExperienceSection = () => (
-    <Section id="experience" title="Professional Experience">
-      {(isInView) => (
-        <div className="relative space-y-8 md:space-y-12">
-          {PORTFOLIO_DATA.experience.map((exp, index) => (
-            <div key={index} className="flex flex-col md:flex-row relative">
-              {/* Timeline Connector (Visible on desktop) */}
-              <div className={`hidden md:block absolute left-0 top-0 w-1 h-full bg-purple-300 dark:bg-purple-700 ${index === PORTFOLIO_DATA.experience.length - 1 ? 'h-1/2' : ''}`}></div>
-
-              <div
-                className={`md:w-1/12 flex justify-center relative z-10 
-                  ${getAOSClass(isInView, index, 'slide-left')}`}
-                style={{ transitionDelay: isInView ? `${300 + index * 200}ms` : '0ms' }}
-              >
-                <div className="w-8 h-8 bg-purple-600 dark:bg-purple-400 rounded-full flex items-center justify-center shadow-md">
-                  <Briefcase className="w-4 h-4 text-white" />
-                </div>
-              </div>
-
-              <div
-                className={`md:w-11/12 pl-0 md:pl-12 pt-4 md:pt-0 
-                  ${getAOSClass(isInView, index, 'slide-right')}`}
-                style={{ transitionDelay: isInView ? `${300 + index * 200}ms` : '0ms' }}
-              >
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-purple-100 dark:border-purple-900">
-                  <p className="text-sm font-semibold text-pink-500 dark:text-pink-300 mb-1">{exp.period}</p>
-                  <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400">{exp.title}</h3>
-                  <p className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-3">{exp.company}</p>
-                  <p className="text-gray-600 dark:text-gray-400">{exp.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </Section>
-  );
-
+ 
   const ProjectsSection = () => (
     <Section id="projects" title="Featured Projects">
       {(isInView) => (
@@ -746,8 +681,10 @@ const App = () => {
             <div
               key={project.id}
               className={`bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden group border border-purple-100 dark:border-purple-900 transform hover:scale-[1.03] transition-all duration-700 ease-out 
-                ${getAOSClass(isInView, index, 'slide-up')}`}
-              style={{ transitionDelay: isInView ? `${300 + index * 200}ms` : '0ms' }}
+                ${getAOSClass(isInView, index, "slide-up")}`}
+              style={{
+                transitionDelay: isInView ? `${300 + index * 200}ms` : "0ms",
+              }}
             >
               <img
                 src={project.image}
@@ -775,31 +712,31 @@ const App = () => {
     </Section>
   );
 
- const ContactSection = () => {
+  const ContactSection = () => {
     const [formData, setFormData] = useState({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     });
 
     const handleChange = (e) => {
       setFormData({
         ...formData,
-        [e.target.name]: e.target.value
+        [e.target.name]: e.target.value,
       });
     };
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      
-        // Clear form
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
+
+      // Clear form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
     };
 
     return (
@@ -809,31 +746,43 @@ const App = () => {
             {/* Contact Info */}
             <div
               className={`bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-purple-100 dark:border-purple-900 
-              ${getAOSClass(isInView, 0, 'slide-left')}`}
-              style={{ transitionDelay: '300ms' }}
+              ${getAOSClass(isInView, 0, "slide-left")}`}
+              style={{ transitionDelay: "300ms" }}
             >
-              <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-6">
+                Contact Information
+              </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-6">
-                Have a project in mind or just want to say hello? Feel free to reach out to me! I'm always open to new opportunities and collaborations.
+                Have a project in mind or just want to say hello? Feel free to
+                reach out to me! I'm always open to new opportunities and
+                collaborations.
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-3 text-gray-700 dark:text-gray-300">
                   <Mail className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                  <a href="heme5674@gmail.com" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                  <a
+                    href="heme5674@gmail.com"
+                    className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                  >
                     pavankumarcoder@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-700 dark:text-gray-300">
                   <Phone className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                  <a href="tel:+8801878654211" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                  <a
+                    href="tel:+8801878654211"
+                    className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                  >
                     +91 7013458509
                   </a>
                 </div>
               </div>
 
               <div className="mt-8">
-                <h4 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4">Connect with me:</h4>
+                <h4 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4">
+                  Connect with me:
+                </h4>
                 <div className="flex space-x-4">
                   {PORTFOLIO_DATA.socials.map((social) => (
                     <a
@@ -854,14 +803,23 @@ const App = () => {
             {/* Contact Form */}
             <div
               className={`bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-purple-100 dark:border-purple-900 
-              ${getAOSClass(isInView, 1, 'slide-right')}`}
-              style={{ transitionDelay: '500ms' }}
+              ${getAOSClass(isInView, 1, "slide-right")}`}
+              style={{ transitionDelay: "500ms" }}
             >
-              <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-6">Send Me a Message</h3>
+              <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-6">
+                Send Me a Message
+              </h3>
 
-              <form  onSubmit={handleSubmit}  className="space-y-4" action="https://submit-form.com/YnF5LE1Oh">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-4"
+                action="https://submit-form.com/YnF5LE1Oh"
+              >
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
                     Your Name *
                   </label>
                   <input
@@ -877,7 +835,10 @@ const App = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
                     Your Email *
                   </label>
                   <input
@@ -893,7 +854,10 @@ const App = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
                     Subject *
                   </label>
                   <input
@@ -909,7 +873,10 @@ const App = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -942,15 +909,17 @@ const App = () => {
     <footer className="bg-gray-100 dark:bg-gray-900 py-8 px-4 sm:px-8 lg:px-16 border-t border-purple-200 dark:border-purple-800">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-gray-600 dark:text-gray-400 text-sm">
-          &copy; {new Date().getFullYear()} Naga Venkata Pavan Kumar. All rights reserved. | Built with React and Tailwind CSS.
+          &copy; {new Date().getFullYear()} Naga Venkata Pavan Kumar. All rights
+          reserved. | Built with React and Tailwind CSS.
         </p>
       </div>
     </footer>
   );
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'dark' : ''} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans`}>
-
+    <div
+      className={`min-h-screen ${isDarkMode ? "dark" : ""} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans`}
+    >
       {/* Custom Cursor Trail (Always rendered) */}
       {CursorTrail}
 
@@ -960,8 +929,6 @@ const App = () => {
         <HeroSection />
         <AboutMeSection />
         <SkillsSection />
-        <EducationSection />
-        <ExperienceSection />
         <ProjectsSection />
         <ContactSection />
       </main>
